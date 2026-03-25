@@ -297,9 +297,9 @@ class ExercisePDF(FPDF):
                     if isinstance(ans, dict):
                         ans_text = f'{i+1}. {ans.get("answer","")}'
                         if ans.get('explanation'):
-                            ans_text += f'  ▸解析：{ans["explanation"]}'
+                            ans_text += f'  →解析：{ans["explanation"]}'
                         if ans.get('error_tip'):
-                            ans_text += f'  ⚠易错提醒：{ans["error_tip"]}'
+                            ans_text += f'  易错：易错提醒：{ans["error_tip"]}'
                     else:
                         ans_text = f'{i+1}. {ans}'
                     self.multi_cell(175, 5.5, ans_text, new_x='LMARGIN', new_y='NEXT')
